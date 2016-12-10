@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\LeftCupboardDoor.cs" />
      <Compile Include="Assets\Scripts\PlayerActions.cs" />
      <Compile Include="Assets\Scripts\RightCupboardDoor.cs" />
+     <Compile Include="Assets\Scripts\TVStandLeftDoor.cs" />
+     <Compile Include="Assets\Scripts\TVStandRightDoor.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

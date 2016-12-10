@@ -15,17 +15,5 @@ PROPS:
 - not a whole lot of programming... Just actionable items to visualize clues.
 - a lot of voice acting, probably also sound effects.
 
-Apartment 6mx7m (42m2) + bathroom
-Time to go take some pictures for the textures!!
-
-2 AM.... As I thought, the assets are taking a super long time to build...
-Time to call it a night... I should get the kitchen done soon and start on the mechanics of basic animation / discovery
-
-Then I need to make the desk, the TV + stand, the bathroom, the bathroom sink and the bathtube (6 big models!)
-I will start working on some music right after that to pause from blender
-Then it'll all be about building the phase 1 where we have clues around, aka more models but much smaller.
-And hopefully I can get to start phase 2, with the mood shift and the new textures for the walls...
-Sound effects will play a huge part so I need to dedicate some time to that as well..
-
-
+desk, the TV + stand, the bathroom, the bathroom sink and the bathtube
 
