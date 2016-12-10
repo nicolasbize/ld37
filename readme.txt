@@ -14,3 +14,12 @@ PROPS:
 - some music for each mood, jazz-style improv for the UAKM part, and stressful for the second part... Perhaps the Fight club music in the end.
 - not a whole lot of programming... Just actionable items to visualize clues.
 - a lot of voice acting, probably also sound effects.
+
+Apartment 6mx7m (42m2) + bathroom
+Time to go take some pictures for the textures!!
+
+Almost done with the playground area...
+
+TIME TO GO EAT BEFORE EVERYTHING CLOSES...
+
+
