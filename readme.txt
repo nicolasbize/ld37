@@ -18,8 +18,14 @@ PROPS:
 Apartment 6mx7m (42m2) + bathroom
 Time to go take some pictures for the textures!!
 
-Almost done with the playground area...
+2 AM.... As I thought, the assets are taking a super long time to build...
+Time to call it a night... I should get the kitchen done soon and start on the mechanics of basic animation / discovery
 
-TIME TO GO EAT BEFORE EVERYTHING CLOSES...
+Then I need to make the desk, the TV + stand, the bathroom, the bathroom sink and the bathtube (6 big models!)
+I will start working on some music right after that to pause from blender
+Then it'll all be about building the phase 1 where we have clues around, aka more models but much smaller.
+And hopefully I can get to start phase 2, with the mood shift and the new textures for the walls...
+Sound effects will play a huge part so I need to dedicate some time to that as well..
+
 
 
