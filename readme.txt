@@ -15,5 +15,5 @@ PROPS:
 - not a whole lot of programming... Just actionable items to visualize clues.
 - a lot of voice acting, probably also sound effects.
 
-desk, the TV + stand, the bathroom, the bathroom sink and the bathtube
+the bathroom sink  AND THE TOILET
 
