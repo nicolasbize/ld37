@@ -12,9 +12,13 @@ public class PlayerActions : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward * 3f);
         if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
-            Debug.Log(hit.transform.name);
+            if (Input.GetMouseButtonUp(0)) {
+                IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
+                if (actionable != null) {
+                    actionable.Triggered();
+                }    
+            }
         }
 	}
 }
