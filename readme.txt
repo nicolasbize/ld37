@@ -15,5 +15,6 @@ PROPS:
 - not a whole lot of programming... Just actionable items to visualize clues.
 - a lot of voice acting, probably also sound effects.
 
-the bathroom sink  AND THE TOILET
+the pipes, the 2 dead hung bodies, a bunch of props
+
 
