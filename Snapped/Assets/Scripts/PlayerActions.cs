@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	private bool enabled = true;
 	
 	// Update is called once per frame
 	void Update () {
-		RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
-            if (Input.GetMouseButtonUp(0)) {
-                IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
-                if (actionable != null) {
-                    actionable.Triggered();
-                }
-                ClueCollider clue = hit.transform.gameObject.GetComponent<ClueCollider>();
-                if (clue != null) {
-                    clue.Interact();
+        if (enabled) {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
+                if (Input.GetMouseButtonUp(0)) {
+                    IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
+                    if (actionable != null) {
+                        actionable.Triggered();
+                    }
+                    ClueCollider clue = hit.transform.gameObject.GetComponent<ClueCollider>();
+                    if (clue != null) {
+                        clue.Interact();
+                    }
                 }
             }
         }
+
 	}
+
+    public void Disable() {
+        this.enabled = false;
+    }
 }

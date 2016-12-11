@@ -36,4 +36,8 @@ public class SoundManager : MonoBehaviour {
     void Update() {
         timer ++;
     }
+
+    public bool IsPlaying() {
+        return GetComponent<AudioSource>().isPlaying;
+    }
 }

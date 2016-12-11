@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\IUI.cs" />
      <Compile Include="Assets\Scripts\LeftCupboardDoor.cs" />
      <Compile Include="Assets\Scripts\MailNotice.cs" />
+     <Compile Include="Assets\Scripts\Phase2Trigger.cs" />
      <Compile Include="Assets\Scripts\PlayerActions.cs" />
      <Compile Include="Assets\Scripts\RightCupboardDoor.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />

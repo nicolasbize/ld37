@@ -17,7 +17,7 @@ public class UI : MonoBehaviour, IUI {
     private float mainMusicVolume = 0f;
     private bool isFadingMusic = false;
     private AudioClip currentClip = null;
-    private HashSet<string> cluesFound = new HashSet<string>();
+    public HashSet<string> cluesFound = new HashSet<string>();
 
     void Start () {
         AudioSource audio = gameObject.GetComponent<AudioSource>();
