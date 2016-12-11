@@ -13,10 +13,11 @@ public class UI : MonoBehaviour, IUI {
     public AudioClip introMusic;
     public AudioClip mainMusic;
     public AudioClip endMusic;
-    private float introMusicVolume = 1f;
+    private float introMusicVolume = 0.5f;
     private float mainMusicVolume = 0f;
     private bool isFadingMusic = false;
     private AudioClip currentClip = null;
+    private HashSet<string> cluesFound = new HashSet<string>();
 
     void Start () {
         AudioSource audio = gameObject.GetComponent<AudioSource>();
@@ -27,6 +28,19 @@ public class UI : MonoBehaviour, IUI {
         Image img = GameObject.Find("IntroFade").GetComponent<Image>();
         Color fadeCol = new Color (1f, 1f, 1f, 0f);
         img.CrossFadeColor(fadeCol, 4f, true, true);
+        Invoke("StartSpeech", 2);
+    }
+
+    void StartSpeech() {
+
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("intro", false);
+    }
+
+    public void FoundClue(string clue) {
+        if (!cluesFound.Contains(clue)) {
+            cluesFound.Add(clue);
+        }
+        GameObject.Find("Score").GetComponent<Text>().text = "Clues: " + cluesFound.Count + "/20";
     }
 
     public void DisplayDismissableItem(string objName) {
@@ -62,6 +76,7 @@ public class UI : MonoBehaviour, IUI {
                 this.activeObject.SetActive(false);
                 this.activeObject = null;
                 this.timer = 0;
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().StopSounds();
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
             }
 
@@ -83,7 +98,7 @@ public class UI : MonoBehaviour, IUI {
                 audio.clip = mainMusic;
                 audio.Play();
             }
-            if (mainMusicVolume < 1) {
+            if (mainMusicVolume < 0.5f) {
                 mainMusicVolume += 0.1f * Time.deltaTime;
                 audio.volume = mainMusicVolume;
             } else {

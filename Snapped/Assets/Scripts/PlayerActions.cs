@@ -17,7 +17,11 @@ public class PlayerActions : MonoBehaviour {
                 IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
                 if (actionable != null) {
                     actionable.Triggered();
-                }    
+                }
+                ClueCollider clue = hit.transform.gameObject.GetComponent<ClueCollider>();
+                if (clue != null) {
+                    clue.Interact();
+                }
             }
         }
 	}
