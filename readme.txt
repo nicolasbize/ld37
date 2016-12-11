@@ -29,8 +29,8 @@ ALLRIGHT LETS WORK ON THE CLUES:
 
 X Mail Notices in front of the door: shows they have left about 3 days ago
 X Diary: shows the guy is crazy and hears voices, also talks about the fact his wife/kid left him
-- Teddy bear: shows they left in a hurry
-- Food in kitchen: shows that someone was here not too long ago
+X Teddy bear: shows they left in a hurry
+X Food in kitchen: shows that someone was here not too long ago
 - Termination letter in Desk: shows that the guy was hitting rock bottom
 - LSD and other pills: shows that they were on depression medication
 - Answering machine: one message from grandmother asking her child to answer and come see her in Baltimore
