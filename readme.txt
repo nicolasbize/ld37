@@ -17,4 +17,17 @@ PROPS:
 
 the pipes, the 2 dead hung bodies, a bunch of props
 
+OK TIME TO PAUSE BLENDER... Let's go ahead and work on the music for the game
+
+So we'll need 4 music:
+- one for the intro (slow blues improv)
+- one for the stage 1 (slow jazz improv)
+- one stressful for stage 2 (we'll mixup some stuff here)
+- one for the credits (cover from the trial - pink floyd during the chorus "Craaazy..")
+
+GarageBand here we go!!
+
+
+
+
 
