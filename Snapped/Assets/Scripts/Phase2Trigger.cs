@@ -7,6 +7,7 @@ public class Phase2Trigger : MonoBehaviour {
 
     private bool entered = false;
     private bool shifted = false;
+    public GameObject phase2Decals = null;
 
     void OnTriggerEnter(Collider other) {
 //        if (GameObject.Find("UI").GetComponent<UI>().cluesFound.Count > 6) {
@@ -37,6 +38,7 @@ public class Phase2Trigger : MonoBehaviour {
                 if (!GameObject.Find("SoundManager").GetComponent<SoundManager>().IsPlaying()) {
                     GameObject.Find("LampTorch").GetComponent<Light>().enabled = true;
                     GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+                    phase2Decals.SetActive(true);
                 }
             }
 

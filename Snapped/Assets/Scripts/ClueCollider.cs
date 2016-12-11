@@ -14,6 +14,7 @@ public class ClueCollider : MonoBehaviour {
 
         if (givePoints) {
             GameObject.Find("UI").GetComponent<UI>().FoundClue(name);
+            GameObject.Find("DingDing").GetComponent<AudioSource>().Play();
         }
     }
 
