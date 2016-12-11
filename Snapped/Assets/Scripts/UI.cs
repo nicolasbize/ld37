@@ -40,6 +40,7 @@ public class UI : MonoBehaviour, IUI {
     public void FoundClue(string clue) {
         if (!cluesFound.Contains(clue)) {
             cluesFound.Add(clue);
+            GameObject.Find("DingDing").GetComponent<AudioSource>().Play();
         }
         GameObject.Find("Score").GetComponent<Text>().text = "Clues: " + cluesFound.Count + "/20";
     }

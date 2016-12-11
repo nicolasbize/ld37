@@ -45,6 +45,7 @@ public class Phase2Trigger : MonoBehaviour {
                     GameObject.Find("Scared").GetComponent<AudioSource>().Play();
                     Invoke("StartBreathing", 2);
                     Invoke("Daddy", 4);
+                    Invoke("BamBam", 15);
                     shifted = true;
                 }
 
@@ -61,5 +62,9 @@ public class Phase2Trigger : MonoBehaviour {
 
     private void Daddy() {
         GameObject.Find("Daddy").GetComponent<AudioSource>().Play();
+    }
+
+    private void BamBam() {
+        GameObject.Find("FrontDoor").GetComponent<FrontDoor>().SetFinale();
     }
 }
