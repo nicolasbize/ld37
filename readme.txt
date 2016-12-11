@@ -17,13 +17,7 @@ PROPS:
 
 the pipes, the 2 dead hung bodies, a bunch of props
 
-OK TIME TO PAUSE BLENDER... Let's go ahead and work on the music for the game
-
-So we'll need 4 music:
-- one for the intro (slow blues improv)
-- one for the stage 1 (slow jazz improv)
 - one stressful for stage 2 (we'll mixup some stuff here)
-- one for the credits (cover from the trial - pink floyd during the chorus "Craaazy..")
 
 ALLRIGHT LETS WORK ON THE CLUES:
 
@@ -31,16 +25,98 @@ X Mail Notices in front of the door: shows they have left about 3 days ago
 X Diary: shows the guy is crazy and hears voices, also talks about the fact his wife/kid left him
 X Teddy bear: shows they left in a hurry
 X Food in kitchen: shows that someone was here not too long ago
-- Termination letter in Desk: shows that the guy was hitting rock bottom
-- LSD and other pills: shows that they were on depression medication
+X Termination letter in Desk: shows that the guy was hitting rock bottom
+X LSD and other pills: shows that they were on depression medication
 - Answering machine: one message from grandmother asking her child to answer and come see her in Baltimore
 - 2 bus tickets (1 adult / 1 child) for trip to Baltimore
 - Alcohol: shows they were not stable
-- Boxes: shows they have a tendency to move from place to place
+X Boxes: shows they have a tendency to move from place to place
+- Papers and clothes everywhere
 - Picture Frame: shows they were united at one point
 - Broken vase: shows they were having issues
 - Chair on bed: shows noone has slept there
-- TV not working: shows how tedious their situation was
-- Disgusting bathroom: shows noone has been cleaning for weeks
+X TV not working: shows how tedious their situation was
+X Disgusting bathroom: shows noone has been cleaning for weeks
 
+Also need stuff in kitchen drawers
+
+Kathy, Bobby
+John
+Kadelsky
+
+
+Time to record some sounds and voices!!
+
+- Door jammed
+- Cupboard open + close
+- Drawer open + close
+- Book open + close
+- Letter open + close
+- Faucet open + close
+- TV not working
+- Door bam-bam + crash
+- Cardboard boxes
+
+- Voices:
+John/TexMurphy:
+"About 3 days ago, I received a call about a missing family.
+As one of the best P.I.s out there, those calls are not uncommon...
+I easily got in the apartment.
+Now I just need to find out where they went..."
+"Oh that smell is awful... I think my nose started to bleed permanently."
+"A pipe in the middle of the apartment? Thought I had seen everything... Classy!"
+"Ah perfect, time for my favorite show! <click> Dang, broken."
+"What do we have here?"
+"December 7th, 1976. This place was no longer for us. We don't belong here. It was time to go.
+I helped Kathy and Bobby leave first. I love them so much. Why couldn't I go as well?
+I am trapped in this appartment. Drugs are helping, I think.
+I hear their voices calling me! I am not crazy Yadi yadi yada..."
+"Sounds like the wife and kid have gone somewhere... The dad must have come back recently..."
+
+"Let's see..."
+"December 10th, 1976. Mr. Kadelsky, Despite our numerous requests, we still have not received payment for your rent due for the months of October through December. This is the final notice prior to your expulsion by the police. Please pay the due amount of $478 before December 12th. Thank you."
+"Well that explains why they would disappear without saying anything..."
+
+"Hmmm..."
+"Dear John C. Kadelsky. Your employment with AB Transport Services will be officially terminated on December 2nd, 1976. You have been terminated for the following reasons: we have decided to implement a workforce reduction and your position has been terminated. Your conduct around other employees has been questionable in the past. Please be sure that we did not take this decision lightly. Kind Regards, Rob D. Machster"
+"Lost his job, doesn't pay rent... My gut feeling is that he is not coming back here..."
+
+"Tons of boxes around filled with dirty clothes and small toys."
+
+"Ooh a 1965 Rochester King Seat... Classic... and very comfortable!"
+
+"That mattress is disgusting... It has more shades of yellow than the original blue!"
+
+"Good lord! This tub will get you filthier after a bath than before!"
+
+"Maybe I should wash my hands? Naaa...."
+
+"Just a couple of empty boxes and cans. I'll skip dinner for the night."
+
+"This sink is pretty rusty... Like my ex-wife..."
+
+"A teddy bear! I wonder why the kid didn't take it with him... Unless he left in a hurry..."
+
+"There's enough to get a party in here... Let's see... Anti-depressants, LSD, Psilocybe semilanceata..."
+
+"Nothing in here..."
+
+"People say that in case of an earthquake, the toilet is your last source of water... Unless you live here..."
+
+"Nice little floor lamp... I might bring that home..."
+
+
+Cops:
+"OPEN THE DOOR"
+"STAY ON THE FLOOR, PUT YOUR HANDS ON YOUR HEAD"
+"YOU ARE UNDER ARREST FOR THE MURDER OF YOUR WIFE AND SON, ANYTHING THAT YOU WILL SAY CAN BE USED AGAINST YOU..."
+
+Bobby:
+"Come play with me daddy!"
+"Daddy... Daaaaddyyyyy"
+"Where are you Daddy?"
+
+Kathy:
+"Jooohn...."
+"Joooohn... what did you do to us?"
 
