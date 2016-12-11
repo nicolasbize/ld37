@@ -49,11 +49,14 @@
      <Compile Include="Assets\DecalSystem\DecalSystem\Decal.cs" />
      <Compile Include="Assets\Scripts\Drawer.cs" />
      <Compile Include="Assets\Scripts\IActionable.cs" />
+     <Compile Include="Assets\Scripts\IUI.cs" />
      <Compile Include="Assets\Scripts\LeftCupboardDoor.cs" />
+     <Compile Include="Assets\Scripts\MailNotice.cs" />
      <Compile Include="Assets\Scripts\PlayerActions.cs" />
      <Compile Include="Assets\Scripts\RightCupboardDoor.cs" />
      <Compile Include="Assets\Scripts\TVStandLeftDoor.cs" />
      <Compile Include="Assets\Scripts\TVStandRightDoor.cs" />
+     <Compile Include="Assets\Scripts\UI.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

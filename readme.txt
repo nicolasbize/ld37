@@ -25,7 +25,23 @@ So we'll need 4 music:
 - one stressful for stage 2 (we'll mixup some stuff here)
 - one for the credits (cover from the trial - pink floyd during the chorus "Craaazy..")
 
-GarageBand here we go!!
+ALLRIGHT LETS WORK ON THE CLUES:
+
+- Mail Notices in front of the door: shows they have left about 3 days ago
+- Diary: shows the guy is crazy and hears voices, also talks about the fact his wife/kid left him
+- Teddy bear: shows they left in a hurry
+- Food in kitchen: shows that someone was here not too long ago
+- Termination letter in Desk: shows that the guy was hitting rock bottom
+- LSD and other pills: shows that they were on depression medication
+- Answering machine: one message from grandmother asking her child to answer and come see her in Baltimore
+- 2 bus tickets (1 adult / 1 child) for trip to Baltimore
+- Alcohol: shows they were not stable
+- Boxes: shows they have a tendency to move from place to place
+- Picture Frame: shows they were united at one point
+- Broken vase: shows they were having issues
+- Chair on bed: shows noone has slept there
+- TV not working: shows how tedious their situation was
+- Disgusting bathroom: shows noone has been cleaning for weeks
 
 
 
