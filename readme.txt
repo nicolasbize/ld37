@@ -44,20 +44,27 @@ Kathy, Bobby
 John
 Kadelsky
 
+Done with the recordings... That's a lot of voices...
+I need to create some mp3s, currently everything is in audacity.
+I also need some crashing sound for the door...
+Max wants to go home and I think I might need a couple of hours of sleep...
+I'll see if I can finish this off at his place before falling asleep.
+I need to get the sounds properly done, and the first part done as well...
 
 Time to record some sounds and voices!!
 
-- Door jammed
-- Cupboard open + close
-- Drawer open + close
-- Book open + close
-- Letter open + close
-- Faucet open + close
-- TV not working
+X Door jammed
+X Cupboard open + close
+X Drawer open + close
+X Book open + close
+X Letter open + close
+X TV not working
 - Door bam-bam + crash
-- Cardboard boxes
+X Cardboard boxes
+X Ropes
+X Heartbeat
 
-- Voices:
+X Voices:
 John/TexMurphy:
 "About 3 days ago, I received a call about a missing family.
 As one of the best P.I.s out there, those calls are not uncommon...
@@ -87,7 +94,7 @@ I hear their voices calling me! I am not crazy Yadi yadi yada..."
 
 "That mattress is disgusting... It has more shades of yellow than the original blue!"
 
-"Good lord! This tub will get you filthier after a bath than before!"
+"Good lord! This tub will get you filthier when you take a bath in it!"
 
 "Maybe I should wash my hands? Naaa...."
 
@@ -105,6 +112,10 @@ I hear their voices calling me! I am not crazy Yadi yadi yada..."
 
 "Nice little floor lamp... I might bring that home..."
 
+"Oh that's just great... Fuses going out in the middle of a case... Let's see, I always have my lamptorch with me..."
+
+"Oh God, what in the world..."
+"Kathy... Bobby..."
 
 Cops:
 "OPEN THE DOOR"
