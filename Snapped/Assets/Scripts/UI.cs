@@ -28,7 +28,6 @@ public class UI : MonoBehaviour, IUI {
 
     void Update () {
         timer++;
-        Debug.Log(timer);
         if (this.activeObject != null && Input.GetMouseButtonUp(0) && this.timer > 30) {
             this.activeObject.SetActive(false);
             this.activeObject = null;
