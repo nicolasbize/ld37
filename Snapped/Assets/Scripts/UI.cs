@@ -36,6 +36,7 @@ public class UI : MonoBehaviour, IUI {
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("intro", false);
     }
 
+
     public void FoundClue(string clue) {
         if (!cluesFound.Contains(clue)) {
             cluesFound.Add(clue);
@@ -66,6 +67,7 @@ public class UI : MonoBehaviour, IUI {
         if (this.timer > 30) {
             if (!hasStarted && Input.GetMouseButtonDown(0)) {
                 this.isFadingMusic = true;
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().StopSounds();
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
                 Image img = GameObject.Find("IntroScreen").GetComponent<Image>();
                 Color fadeCol = new Color (1f, 1f, 1f, 0f);
