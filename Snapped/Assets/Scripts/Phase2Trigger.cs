@@ -25,7 +25,6 @@ public class Phase2Trigger : MonoBehaviour {
                 player.transform.rotation = new Quaternion(0, 94, 0, 0);
                 GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().Disable();
                 RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
-
                 entered = true;
             }
         }
@@ -37,6 +36,8 @@ public class Phase2Trigger : MonoBehaviour {
                 AudioSource src = GameObject.Find("UI").GetComponent<AudioSource>();
                 if (src.volume > 0) {
                     src.volume -= 0.1f * Time.deltaTime;
+                } else {
+                    src.Stop();
                 }
                 if (!GameObject.Find("SoundManager").GetComponent<SoundManager>().IsPlaying()) {
                     GameObject.Find("LampTorch").GetComponent<Light>().enabled = true;
