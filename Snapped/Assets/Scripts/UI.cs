@@ -110,4 +110,19 @@ public class UI : MonoBehaviour, IUI {
         }
     }
 
+    public void EndGame() {
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
+        GameObject.Find("ScaryMusic").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Scared").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Breathing").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Heart").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Daddy").GetComponent<AudioSource>().Stop();
+        GameObject.Find("Whine").GetComponent<AudioSource>().Play();
+        Image img = GameObject.Find("IntroFade").GetComponent<Image>();
+        Color fadeCol = new Color (1f, 1f, 1f, 1f);
+        img.CrossFadeColor(fadeCol, 4f, true, true);
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound(endMusic, false);
+
+    }
+
 }

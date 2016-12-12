@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\ClueCollider.cs" />
      <Compile Include="Assets\Scripts\Diary.cs" />
      <Compile Include="Assets\Scripts\Drawer.cs" />
+     <Compile Include="Assets\Scripts\FinalTrigger.cs" />
      <Compile Include="Assets\Scripts\FrontDoor.cs" />
      <Compile Include="Assets\Scripts\IActionable.cs" />
      <Compile Include="Assets\Scripts\IUI.cs" />

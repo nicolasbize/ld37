@@ -22,6 +22,12 @@ public class PlayerActions : MonoBehaviour {
                     }
                 }
             }
+            Debug.DrawRay(transform.position, transform.forward * 6f);
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 6f)) {
+                if (hit.transform.gameObject.tag == "EndTag") {
+                    GameObject.Find("UI").GetComponent<UI>().EndGame();
+                }
+            }
         }
 
 	}
