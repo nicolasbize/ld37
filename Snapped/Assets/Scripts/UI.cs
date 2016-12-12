@@ -18,6 +18,8 @@ public class UI : MonoBehaviour, IUI {
     private bool isFadingMusic = false;
     private AudioClip currentClip = null;
     public HashSet<string> cluesFound = new HashSet<string>();
+    private bool isEnding = false;
+    private bool allowClick = false;
 
     void Start () {
         AudioSource audio = gameObject.GetComponent<AudioSource>();
@@ -29,6 +31,7 @@ public class UI : MonoBehaviour, IUI {
         Color fadeCol = new Color (1f, 1f, 1f, 0f);
         img.CrossFadeColor(fadeCol, 4f, true, true);
         Invoke("StartSpeech", 2);
+        Invoke("AllowClick", 5);
     }
 
     void StartSpeech() {
@@ -36,6 +39,9 @@ public class UI : MonoBehaviour, IUI {
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("intro", false);
     }
 
+    void AllowClick() {
+        this.allowClick = true;
+    }
 
     public void FoundClue(string clue) {
         if (!cluesFound.Contains(clue)) {
@@ -46,7 +52,7 @@ public class UI : MonoBehaviour, IUI {
     }
 
     public void DisplayDismissableItem(string objName) {
-        if (this.timer > 30) {
+        if (this.timer > 30 && activeObject == null) {
             Transform obj = transform.FindChild(objName);
             if (obj != null) {
                 obj.gameObject.SetActive(true);
@@ -64,27 +70,37 @@ public class UI : MonoBehaviour, IUI {
     }
 
     void Update () {
-        timer++;
-        if (this.timer > 30) {
-            if (!hasStarted && Input.GetMouseButtonDown(0)) {
-                this.isFadingMusic = true;
-                GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
-                GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
-                Image img = GameObject.Find("IntroScreen").GetComponent<Image>();
-                Color fadeCol = new Color (1f, 1f, 1f, 0f);
-                img.CrossFadeColor(fadeCol, 3f, true, true);
-                return;
+        if (this.allowClick) {
+            timer++;
+            if (this.timer > 30) {
+                if (!hasStarted && Input.GetMouseButtonDown(0)) {
+                    this.isFadingMusic = true;
+                    GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+                    GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
+                    Image img = GameObject.Find("IntroScreen").GetComponent<Image>();
+                    Color fadeCol = new Color (1f, 1f, 1f, 0f);
+                    img.CrossFadeColor(fadeCol, 3f, true, true);
+                    return;
+                }
+                if (this.activeObject != null && Input.GetMouseButtonUp(0)) {
+                    this.activeObject.SetActive(false);
+                    this.activeObject = null;
+                    this.timer = 0;
+                    GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+                }
+
             }
-            if (this.activeObject != null && Input.GetMouseButtonUp(0)) {
-                this.activeObject.SetActive(false);
-                this.activeObject = null;
-                this.timer = 0;
-                GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+            if (this.isFadingMusic) {
+                this.CrossFadeMusic();
             }
 
-        }
-        if (this.isFadingMusic) {
-            this.CrossFadeMusic();
+            if (this.isEnding) {
+                GameObject.Find("ScaryMusic").GetComponent<AudioSource>().volume -= 0.1f * Time.deltaTime;
+                GameObject.Find("Breathing").GetComponent<AudioSource>().volume -= 0.1f * Time.deltaTime;
+                GameObject.Find("Heart").GetComponent<AudioSource>().volume -= 0.1f * Time.deltaTime;
+                GameObject.Find("Bambam").GetComponent<AudioSource>().volume -= 0.1f * Time.deltaTime;
+                GameObject.Find("Daddy").GetComponent<AudioSource>().volume -= 0.1f * Time.deltaTime;
+            }
         }
 
     }
@@ -111,16 +127,21 @@ public class UI : MonoBehaviour, IUI {
     }
 
     public void EndGame() {
-        GameObject.Find("ScaryMusic").GetComponent<AudioSource>().Stop();
-        GameObject.Find("Breathing").GetComponent<AudioSource>().Stop();
-        GameObject.Find("Heart").GetComponent<AudioSource>().Stop();
-        GameObject.Find("Bambam").GetComponent<AudioSource>().Stop();
-        GameObject.Find("Whine").GetComponent<AudioSource>().Play();
-        Image img = GameObject.Find("IntroFade").GetComponent<Image>();
-        Color fadeCol = new Color (1f, 1f, 1f, 1f);
-        img.CrossFadeColor(fadeCol, 4f, true, true);
-        GameObject.Find("EndMusic").GetComponent<AudioSource>().Play();
+        if (!this.isEnding) {
+            this.isEnding = true;
+            AudioSource audio = gameObject.GetComponent<AudioSource>();
+            audio.Stop();
+            GameObject.Find("Whine").GetComponent<AudioSource>().Play();
+            GameObject.Find("EndMusic").GetComponent<AudioSource>().Play();
+            Image img = GameObject.Find("IntroFade").GetComponent<Image>();
+            Color fadeCol = new Color (1f, 1f, 1f, 1f);
+            img.CrossFadeColor(fadeCol, 4f, true, true);
+            Invoke("ShowEnd", 4);
+        }
+    }
 
+    public void ShowEnd() {
+        GameObject.Find("EndText").GetComponent<Text>().enabled = true;
     }
 
 }

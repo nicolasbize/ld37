@@ -18,10 +18,12 @@ public class SoundManager : MonoBehaviour {
 
     public void PlaySound(AudioClip clip, bool loop) {
         AudioSource src = GetComponent<AudioSource>();
-        src.volume = 1f;
-        src.clip = clip;
-        src.loop = loop;
-        src.Play();
+        if (src.clip != clip) {
+            src.volume = 1f;
+            src.clip = clip;
+            src.loop = loop;
+            src.Play();
+        }
     }
 
 //    public void StopSounds() {
