@@ -9,9 +9,7 @@ public class ClueCollider : MonoBehaviour {
     public bool loop = false;
 
     public void Interact() {
-
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound(clip, loop);
-
         if (givePoints) {
             GameObject.Find("UI").GetComponent<UI>().FoundClue(name);
         }

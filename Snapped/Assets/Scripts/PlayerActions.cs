@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour {
 
-	private bool enabled = true;
+	private bool myEnabled = true;
 	
 	// Update is called once per frame
 	void Update () {
-        if (enabled) {
+        if (myEnabled) {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
                 if (Input.GetMouseButtonUp(0)) {
@@ -27,6 +27,6 @@ public class PlayerActions : MonoBehaviour {
 	}
 
     public void Disable() {
-        this.enabled = false;
+        this.myEnabled = false;
     }
 }

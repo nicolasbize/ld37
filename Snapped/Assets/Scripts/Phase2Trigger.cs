@@ -12,6 +12,7 @@ public class Phase2Trigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (!entered) {
+            Debug.Log("OK");
     //        if (GameObject.Find("UI").GetComponent<UI>().cluesFound.Count > 6) {
                 foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Light")) {
                     Light light = obj.GetComponent<Light>();

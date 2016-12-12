@@ -131,3 +131,13 @@ Kathy:
 "Jooohn...."
 "Joooohn... what did you do to us?"
 
+
+
+
+Couldn't get everything I wanted in here... =
+Only 2 hours left, which is just enough for the pipes and hung family + rope sound and action
+Also a fade into the final screen with the music... LET'S DO THIS!!!!
+
+
+
+

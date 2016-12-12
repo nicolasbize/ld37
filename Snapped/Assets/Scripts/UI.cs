@@ -68,8 +68,8 @@ public class UI : MonoBehaviour, IUI {
         if (this.timer > 30) {
             if (!hasStarted && Input.GetMouseButtonDown(0)) {
                 this.isFadingMusic = true;
-                GameObject.Find("SoundManager").GetComponent<SoundManager>().StopSounds();
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
+                GameObject.Find("SoundManager").GetComponent<AudioSource>().Stop();
                 Image img = GameObject.Find("IntroScreen").GetComponent<Image>();
                 Color fadeCol = new Color (1f, 1f, 1f, 0f);
                 img.CrossFadeColor(fadeCol, 3f, true, true);
@@ -79,7 +79,6 @@ public class UI : MonoBehaviour, IUI {
                 this.activeObject.SetActive(false);
                 this.activeObject = null;
                 this.timer = 0;
-                GameObject.Find("SoundManager").GetComponent<SoundManager>().StopSounds();
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
             }
 

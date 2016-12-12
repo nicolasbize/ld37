@@ -17,25 +17,20 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlaySound(AudioClip clip, bool loop) {
-        if (timer > 10) {
-            AudioSource src = GetComponent<AudioSource>();
-            src.clip = clip;
-            src.loop = loop;
-            src.Play();
-        }
-
-    }
-
-    public void StopSounds() {
         AudioSource src = GetComponent<AudioSource>();
-        src.Stop();
-        timer = 0;
+        src.volume = 1f;
+        src.clip = clip;
+        src.loop = loop;
+        src.Play();
     }
 
+//    public void StopSounds() {
+//        AudioSource src = GetComponent<AudioSource>();
+//        src.Stop();
+//        timer = 0;
+//    }
 
-    void Update() {
-        timer ++;
-    }
+
 
     public bool IsPlaying() {
         return GetComponent<AudioSource>().isPlaying;
