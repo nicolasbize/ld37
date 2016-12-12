@@ -10,7 +10,7 @@ public class PlayerActions : MonoBehaviour {
 	void Update () {
         if (myEnabled) {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) {
                 if (Input.GetMouseButtonUp(0)) {
                     IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
                     if (actionable != null) {
@@ -22,8 +22,10 @@ public class PlayerActions : MonoBehaviour {
                     }
                 }
             }
-            Debug.DrawRay(transform.position, transform.forward * 6f);
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 6f)) {
+
+        } else {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) {
                 if (hit.transform.gameObject.tag == "EndTag") {
                     GameObject.Find("UI").GetComponent<UI>().EndGame();
                 }

@@ -12,22 +12,22 @@ public class Phase2Trigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (!entered) {
-            Debug.Log("OK");
-    //        if (GameObject.Find("UI").GetComponent<UI>().cluesFound.Count > 6) {
+            if (GameObject.Find("UI").GetComponent<UI>().cluesFound.Count > 6) {
                 foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Light")) {
                     Light light = obj.GetComponent<Light>();
                     light.enabled = false;
                 }
-            GameObject.Find("Light").SetActive(false);
-            GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("lightsout", false);
-            GameObject player = GameObject.Find("FPSController");
-            player.GetComponent<FirstPersonController>().enabled = false;
-            player.transform.position = new Vector3(3.35202f, 0.83f, -1.1336f);
-            player.transform.rotation = new Quaternion(0, 94, 0, 0);
-            GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().Disable();
-            RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
+                GameObject.Find("Light").SetActive(false);
+                GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("lightsout", false);
+                GameObject player = GameObject.Find("FPSController");
+                player.GetComponent<FirstPersonController>().enabled = false;
+                player.transform.position = new Vector3(3.35202f, 0.83f, -1.1336f);
+                player.transform.rotation = new Quaternion(0, 94, 0, 0);
+                GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().Disable();
+                RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
 
-            entered = true;
+                entered = true;
+            }
         }
     }
 
