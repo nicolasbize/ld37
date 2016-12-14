@@ -7,10 +7,10 @@ public class PlayerActions : MonoBehaviour {
 	private bool myEnabled = true;
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (myEnabled) {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 5f)) {
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f)) {
                 if (Input.GetMouseButtonUp(0)) {
                     IActionable actionable = hit.transform.gameObject.GetComponent<IActionable>();
                     if (actionable != null) {

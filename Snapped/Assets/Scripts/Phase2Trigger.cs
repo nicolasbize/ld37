@@ -8,6 +8,7 @@ public class Phase2Trigger : MonoBehaviour {
     private bool entered = false;
     private bool shifted = false;
     public GameObject phase2Decals = null;
+    private bool canStartPhase2 = false;
 
 
     void OnTriggerEnter(Collider other) {
@@ -23,14 +24,21 @@ public class Phase2Trigger : MonoBehaviour {
                 player.GetComponent<FirstPersonController>().enabled = false;
                 player.transform.position = new Vector3(3.35202f, 0.83f, -1.1336f);
                 player.transform.rotation = new Quaternion(0, 94, 0, 0);
+                GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().enabled = false;
                 GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().Disable();
                 RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
                 entered = true;
+                Invoke("StartPhase2", 12);
             }
         }
     }
 
-    void Update() {
+    private void StartPhase2() {
+        this.canStartPhase2 = true;
+        GameObject.Find("FirstPersonCharacter").GetComponent<PlayerActions>().enabled = true;
+    }
+
+    void FixedUpdate() {
         if (entered) {
             if (!shifted) {
                 AudioSource src = GameObject.Find("UI").GetComponent<AudioSource>();
@@ -39,7 +47,7 @@ public class Phase2Trigger : MonoBehaviour {
                 } else {
                     src.Stop();
                 }
-                if (!GameObject.Find("SoundManager").GetComponent<SoundManager>().IsPlaying()) {
+                if (canStartPhase2) {
                     GameObject.Find("LampTorch").GetComponent<Light>().enabled = true;
                     GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
                     phase2Decals.SetActive(true);

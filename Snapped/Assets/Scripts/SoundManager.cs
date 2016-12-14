@@ -5,7 +5,6 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 
     public AudioClip[] audioClips;
-    private int timer = 0;
 
     public void PlaySound(string name, bool loop) {
         foreach(AudioClip clip in audioClips){
@@ -25,14 +24,6 @@ public class SoundManager : MonoBehaviour {
             src.Play();
         }
     }
-
-//    public void StopSounds() {
-//        AudioSource src = GetComponent<AudioSource>();
-//        src.Stop();
-//        timer = 0;
-//    }
-
-
 
     public bool IsPlaying() {
         return GetComponent<AudioSource>().isPlaying;

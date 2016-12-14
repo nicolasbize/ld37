@@ -69,7 +69,7 @@ public class UI : MonoBehaviour, IUI {
 
     }
 
-    void Update () {
+    void FixedUpdate () {
         if (this.allowClick) {
             timer++;
             if (this.timer > 30) {
@@ -132,16 +132,20 @@ public class UI : MonoBehaviour, IUI {
             AudioSource audio = gameObject.GetComponent<AudioSource>();
             audio.Stop();
             GameObject.Find("Whine").GetComponent<AudioSource>().Play();
-            GameObject.Find("EndMusic").GetComponent<AudioSource>().Play();
             Image img = GameObject.Find("IntroFade").GetComponent<Image>();
             Color fadeCol = new Color (1f, 1f, 1f, 1f);
             img.CrossFadeColor(fadeCol, 4f, true, true);
             Invoke("ShowEnd", 4);
+            Invoke("LastMusic", 19);
         }
     }
 
     public void ShowEnd() {
+        GameObject.Find("Crazy").GetComponent<AudioSource>().Play();
         GameObject.Find("EndText").GetComponent<Text>().enabled = true;
     }
 
+    public void LastMusic() {
+        GameObject.Find("EndMusic").GetComponent<AudioSource>().Play();
+    }
 }
